@@ -1,0 +1,20 @@
+The task for this homework is to scrape these 3 pages:
+* https://www.airbnb.co.uk/rooms/14531512?s=51
+* https://www.airbnb.co.uk/rooms/19278160?s=51
+* https://www.airbnb.co.uk/rooms/1939240?s=51
+
+For this project we first need to extract webpages' html code and then parse it.
+
+For this task I'll be using python. For html extraction I decided to go with request library.
+For parsing task I decided to use BeautifulSoup library.
+
+Whenever we do page retrieval we have to perform checks and throw exceptions
+in case url is incorrect, or the page is down.
+
+After analysing three given link's page source we try to see if there are consistent
+attributes or id values linked to the data we are trying to extract.
+
+We observe that:
+* Appartment type is found in div with class "_1p3joamp"
+* All rooms and their spans are in div that follows appartment div
+* All amenities and their divs are in div that follows class "_18ilrswp"
